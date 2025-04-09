@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="plugin.png" alt="Enchnt Plugin" width="200"/>
+</p>
+
 # Enchnt - Plugin d'Enchantements pour Minecraft
 
 Enchnt est un plugin Spigot qui ajoute de nouveaux enchantements innovants à Minecraft, enrichissant l'expérience de jeu avec des mécaniques uniques et amusantes.
@@ -84,4 +88,4 @@ Le plugin est développé en Java utilisant l'API Spigot. Pour contribuer :
 
 ## Licence
 
-Ce projet est sous licence MIT. Voir le fichier LICENSE pour plus de détails. 
+Ce projet est sous licence MIT. Voir le fichier LICENSE pour plus de détails.

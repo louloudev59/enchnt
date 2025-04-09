@@ -1,0 +1,179 @@
+# Configuration des enchantements
+
+# Tir Rapide
+rapid-fire:
+  enabled: true
+  max-level: 3
+  damage-multiplier: 0.7
+  velocity-multiplier: 0.8
+  delay-between-shots: 2
+
+# Dart de Corde
+rope-dart:
+  enabled: true
+  max-level: 3
+  pull-delay: 20
+  pull-strength: 0.5
+
+# Tir Éparpillé
+scatter-shot:
+  enabled: true
+  max-level: 3
+  radius: 3.0
+  damage-multiplier: 0.5
+
+# Feu Follet
+will-o-wisp:
+  enabled: true
+  max-level: 3
+  explosion-power: 2.0
+  fire-duration: 100
+
+# Exécuteur
+executioner:
+  enabled: true
+  max-level: 3
+  drop-chance: 0.1
+
+# Toxique
+toxic:
+  enabled: true
+  max-level: 3
+  duration: 100
+  regeneration-reduction: 0.5
+
+# Barbare
+barbarian:
+  enabled: true
+  max-level: 5
+  damage-multiplier: 1.2
+
+# Écrasant
+crushing:
+  enabled: true
+  max-level: 3
+  damage-multiplier: 1.5
+
+# Perforant
+piercing:
+  enabled: true
+  max-level: 3
+  damage-multiplier: 1.5
+
+# Excavation
+excavation:
+  enabled: true
+  max-level: 3
+  patterns:
+    - "1x2"
+    - "+"
+    - "3x3"
+
+# Déforestation
+deforestation:
+  enabled: true
+  max-level: 1
+
+# Récolte
+harvest:
+  enabled: true
+  max-level: 1
+
+# Affinité
+affinity:
+  enabled: true
+  max-level: 3
+  repair-amount: 5
+
+# Vitalité
+vitality:
+  enabled: true
+  max-level: 3
+  healing-multiplier: 1.2
+
+# Vigoureux
+vigorous:
+  enabled: true
+  max-level: 3
+  health-bonus: 2
+
+# Stable
+stable:
+  enabled: true
+  max-level: 3
+  knockback-reduction: 0.3
+
+# Plates
+plates:
+  enabled: true
+  max-level: 3
+  armor-bonus: 1
+
+# Peau de Basalte
+basalt-skin:
+  enabled: true
+  max-level: 3
+  fire-resistance-duration: 200
+  speed-reduction: 0.3
+
+# Marcheur de Lave
+lava-walker:
+  enabled: true
+  max-level: 3
+  block-duration: 100
+
+# Secoueur de Terre
+earth-shaker:
+  enabled: true
+  max-level: 3
+  explosion-power: 3.0
+  min-fall-height: 5
+
+# Protection
+protection:
+  enabled: true
+  max-level: 3
+  deflect-chance: 0.2
+
+# Métabolisme
+metabolism:
+  enabled: true
+  max-level: 3
+  hunger-regeneration: 0.1
+
+# Neutraliseur
+neutralizer:
+  enabled: true
+  max-level: 3
+  effect-duration-reduction: 0.5
+
+# Onde de Choc
+shockwave:
+  enabled: true
+  max-level: 3
+  cooldown: 100
+  radius: 5.0
+  knockback-strength: 1.0
+
+# Télékinésie
+telekinesis:
+  enabled: true
+  max-level: 1
+
+# Lié à l'Âme
+soulbound:
+  enabled: true
+  max-level: 1
+
+# Rajeunissement
+rejuvenation:
+  enabled: true
+  max-level: 3
+  repair-interval: 100
+  repair-amount: 1
+
+# Siphon
+siphon:
+  enabled: true
+  max-level: 3
+  exp-multiplier: 1.5 

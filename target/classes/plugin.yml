@@ -1,0 +1,26 @@
+name: Enchnt
+version: '${project.version}'
+main: fr.enchnt.Enchnt
+api-version: 1.20
+api: "1.20"
+authors: [Enchnt]
+description: Plugin d'enchantements personnalisés pour Minecraft
+
+commands:
+  enchnt:
+    description: Commande principale du plugin Enchnt
+    usage: /enchnt <sous-commande>
+    aliases: [enchnts]
+    permission: enchnt.use
+  enchnthelp:
+    description: Affiche l'aide sur les enchantements
+    usage: /enchnthelp
+    permission: enchnt.use
+
+permissions:
+  enchnt.use:
+    description: Permet d'utiliser les commandes du plugin
+    default: true
+  enchnt.admin:
+    description: Permet d'utiliser les commandes d'administration
+    default: op 

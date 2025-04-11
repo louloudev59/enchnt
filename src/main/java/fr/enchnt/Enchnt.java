@@ -3,21 +3,30 @@ package fr.enchnt;
 import org.bukkit.plugin.java.JavaPlugin;
 import fr.enchnt.commands.AdminCommand;
 import fr.enchnt.gui.AdminGUIListener;
+import fr.enchnt.managers.*;
 
 public class Enchnt extends JavaPlugin {
     
     private static Enchnt instance;
+    private EnchantmentManager enchantmentManager;
+    private LootManager lootManager;
+    private VillagerManager villagerManager;
+    private EnchantingManager enchantingManager;
     
     @Override
     public void onEnable() {
         instance = this;
         
+        this.enchantmentManager = new EnchantmentManager();
+        this.lootManager = new LootManager(this);
+        this.villagerManager = new VillagerManager(this);
+        this.enchantingManager = new EnchantingManager(this);
+        
         getCommand("enchntadmin").setExecutor(new AdminCommand(this));
         
         getServer().getPluginManager().registerEvents(new AdminGUIListener(this), this);
         
-        
-        EnchantmentManager.registerEnchantments();
+        enchantmentManager.registerEnchantments();
         
         getCommand("enchnt").setExecutor(new EnchntCommand());
         
@@ -28,12 +37,28 @@ public class Enchnt extends JavaPlugin {
     
     @Override
     public void onDisable() {
-        EnchantmentManager.unregisterEnchantments();
+        enchantmentManager.unregisterEnchantments();
         
         getLogger().info("Enchnt a été désactivé avec succès !");
     }
     
     public static Enchnt getInstance() {
         return instance;
+    }
+    
+    public EnchantmentManager getEnchantmentManager() {
+        return enchantmentManager;
+    }
+    
+    public LootManager getLootManager() {
+        return lootManager;
+    }
+    
+    public VillagerManager getVillagerManager() {
+        return villagerManager;
+    }
+    
+    public EnchantingManager getEnchantingManager() {
+        return enchantingManager;
     }
 } 

@@ -38,7 +38,6 @@ public class WillOWispEnchantment extends CustomEnchantment implements Listener 
         entity.getWorld().createExplosion(
             entity.getLocation(),
             explosionPower * level,
-            false,
             false
         );
         

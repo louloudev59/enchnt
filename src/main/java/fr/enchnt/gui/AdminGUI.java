@@ -1,14 +1,9 @@
 package fr.enchnt.gui;
 
-import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
-import org.bukkit.inventory.Inventory;
-import org.bukkit.inventory.ItemStack;
-import org.bukkit.inventory.meta.ItemMeta;
 import fr.enchnt.Enchnt;
 import java.util.Arrays;
-import java.util.List;
 
 public class AdminGUI extends SubMenu {
     

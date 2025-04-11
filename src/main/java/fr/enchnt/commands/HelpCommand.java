@@ -3,15 +3,11 @@ package fr.enchnt.commands;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
-import org.bukkit.entity.Player;
 import fr.enchnt.Enchnt;
 
 public class HelpCommand implements CommandExecutor {
     
-    private final Enchnt plugin;
-    
     public HelpCommand(Enchnt plugin) {
-        this.plugin = plugin;
     }
     
     @Override

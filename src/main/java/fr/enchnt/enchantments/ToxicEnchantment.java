@@ -33,7 +33,6 @@ public class ToxicEnchantment extends CustomEnchantment implements Listener {
         int level = weapon.getEnchantmentLevel(this);
         
         int duration = Enchnt.getInstance().getConfig().getInt("toxic.duration", 100);
-        double regenerationReduction = Enchnt.getInstance().getConfig().getDouble("toxic.regeneration-reduction", 0.5);
         
         target.addPotionEffect(new PotionEffect(
             PotionEffectType.POISON,

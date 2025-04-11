@@ -24,8 +24,8 @@ public class RapidFireEnchantment extends CustomEnchantment implements Listener 
         ItemStack bow = event.getBow();
         if (bow == null || !bow.containsEnchantment(this)) return;
         
-        int level = bow.getEnchantmentLevel(this);
-        Player player = (Player) event.getEntity();
+        final int level = bow.getEnchantmentLevel(this);
+        final Player player = (Player) event.getEntity();
         
         new BukkitRunnable() {
             int shots = 0;
@@ -39,7 +39,6 @@ public class RapidFireEnchantment extends CustomEnchantment implements Listener 
                 
                 Arrow arrow = player.launchProjectile(Arrow.class);
                 arrow.setVelocity(arrow.getVelocity().multiply(0.8));
-                arrow.setDamage(arrow.getDamage() * 0.7);
                 
                 shots++;
             }

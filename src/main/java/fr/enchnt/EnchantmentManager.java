@@ -11,9 +11,16 @@ import java.util.Map;
 
 public class EnchantmentManager {
     
-    private static final Map<String, Enchantment> enchantments = new HashMap<>();
+    private final Map<String, Enchantment> enchantments;
+    private int nextId;
+    private static final int START_ID = 100;
     
-    public static void registerEnchantments() {
+    public EnchantmentManager() {
+        this.enchantments = new HashMap<>();
+        this.nextId = START_ID;
+    }
+    
+    public void registerEnchantments() {
         registerEnchantment(new RapidFireEnchantment());
         registerEnchantment(new RopeDartEnchantment());
         registerEnchantment(new ScatterShotEnchantment());
@@ -34,11 +41,11 @@ public class EnchantmentManager {
         }
     }
     
-    private static void registerEnchantment(Enchantment enchantment) {
+    private void registerEnchantment(Enchantment enchantment) {
         enchantments.put(enchantment.getName().toLowerCase().replace(" ", "_"), enchantment);
     }
     
-    public static void unregisterEnchantments() {
+    public void unregisterEnchantments() {
         try {
             Field field = Enchantment.class.getDeclaredField("byKey");
             field.setAccessible(true);
@@ -51,5 +58,13 @@ public class EnchantmentManager {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+    
+    public int getNextId() {
+        return nextId++;
+    }
+    
+    public Enchantment getEnchantment(String name) {
+        return enchantments.get(name.toLowerCase().replace(" ", "_"));
     }
 } 

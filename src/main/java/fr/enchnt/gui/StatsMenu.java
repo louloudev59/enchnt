@@ -3,7 +3,6 @@ package fr.enchnt.gui;
 import org.bukkit.Material;
 import fr.enchnt.Enchnt;
 import java.util.Arrays;
-import java.util.List;
 
 public class StatsMenu extends SubMenu {
     

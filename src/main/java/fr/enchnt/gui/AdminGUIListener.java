@@ -10,11 +10,9 @@ import fr.enchnt.Enchnt;
 public class AdminGUIListener implements Listener {
     
     private final Enchnt plugin;
-    private final AdminGUI adminGUI;
     
     public AdminGUIListener(Enchnt plugin) {
         this.plugin = plugin;
-        this.adminGUI = new AdminGUI(plugin);
     }
     
     @EventHandler

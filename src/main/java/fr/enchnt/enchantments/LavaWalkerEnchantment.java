@@ -7,16 +7,13 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerMoveEvent;
-import org.bukkit.inventory.ItemStack;
 import org.bukkit.scheduler.BukkitRunnable;
 import fr.enchnt.Enchnt;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.UUID;
 
 public class LavaWalkerEnchantment extends CustomEnchantment implements Listener {
     
-    private static final UUID LAVA_WALKER_UUID = UUID.fromString("123e4567-e89b-12d3-a456-426614174005");
     private final Map<Block, Integer> magmaBlocks = new HashMap<>();
     
     public LavaWalkerEnchantment() {
@@ -47,7 +44,7 @@ public class LavaWalkerEnchantment extends CustomEnchantment implements Listener
     
     private void createMagmaBlock(Block block) {
         Material originalType = block.getType();
-        block.setType(Material.MAGMA_BLOCK);
+        block.setType(Material.MAGMA);
         
         magmaBlocks.put(block, 100);
         

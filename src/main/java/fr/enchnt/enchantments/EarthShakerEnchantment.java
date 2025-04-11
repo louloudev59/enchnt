@@ -5,22 +5,18 @@ import org.bukkit.Material;
 import org.bukkit.Particle;
 import org.bukkit.Sound;
 import org.bukkit.block.Block;
-import org.bukkit.block.data.BlockData;
 import org.bukkit.enchantments.EnchantmentTarget;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDamageEvent;
 import org.bukkit.event.player.PlayerMoveEvent;
-import org.bukkit.inventory.ItemStack;
 import fr.enchnt.Enchnt;
-import java.util.UUID;
 import java.util.Map;
 import java.util.HashMap;
 
 public class EarthShakerEnchantment extends CustomEnchantment implements Listener {
     
-    private static final UUID EARTH_SHAKER_UUID = UUID.fromString("123e4567-e89b-12d3-a456-426614174006");
     private final Map<Player, Double> fallDistances = new HashMap<>();
     
     public EarthShakerEnchantment() {
@@ -67,9 +63,8 @@ public class EarthShakerEnchantment extends CustomEnchantment implements Listene
         
         player.getWorld().spawnParticle(Particle.EXPLOSION_LARGE, 
             location, 1, 0, 0, 0, 0);
-        BlockData dirtData = Material.DIRT.createBlockData();
         player.getWorld().spawnParticle(Particle.BLOCK_CRACK, 
-            location, 50, 1, 0, 1, 0.1, dirtData);
+            location, 50, 1, 0, 1, 0.1, Material.DIRT);
         
         player.getWorld().playSound(location, Sound.ENTITY_GENERIC_EXPLODE, 1.0f, 0.5f);
         
@@ -83,7 +78,6 @@ public class EarthShakerEnchantment extends CustomEnchantment implements Listene
                 }
             }
         });
-        
         
         for (int x = -(int)radius; x <= radius; x++) {
             for (int y = -1; y <= 1; y++) {

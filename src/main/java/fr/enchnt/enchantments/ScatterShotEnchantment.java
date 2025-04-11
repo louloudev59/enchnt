@@ -7,9 +7,7 @@ import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
-import org.bukkit.event.entity.EntityDamageByEntityEvent;
 import org.bukkit.event.entity.ProjectileHitEvent;
-import org.bukkit.util.Vector;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.Particle;
 import fr.enchnt.Enchnt;
@@ -32,7 +30,6 @@ public class ScatterShotEnchantment extends CustomEnchantment implements Listene
         ItemStack bow = shooter.getInventory().getItemInMainHand();
         if (bow == null || !bow.containsEnchantment(this)) return;
         
-        int level = bow.getEnchantmentLevel(this);
         Entity hitEntity = event.getHitEntity();
         
         if (hitEntity instanceof LivingEntity) {
@@ -41,7 +38,7 @@ public class ScatterShotEnchantment extends CustomEnchantment implements Listene
             double radius = Enchnt.getInstance().getConfig().getDouble("scatter-shot.radius", 3.0);
             double damageMultiplier = Enchnt.getInstance().getConfig().getDouble("scatter-shot.damage-multiplier", 0.5);
             
-            double baseDamage = arrow.getDamage();
+            double baseDamage = 6.0;
             
             for (Entity nearby : mainTarget.getNearbyEntities(radius, radius, radius)) {
                 if (nearby instanceof LivingEntity && nearby != mainTarget) {

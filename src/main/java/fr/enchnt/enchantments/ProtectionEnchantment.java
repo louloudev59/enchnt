@@ -7,16 +7,13 @@ import org.bukkit.entity.Projectile;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
-import org.bukkit.event.player.PlayerItemHeldEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.util.Vector;
 import fr.enchnt.Enchnt;
-import java.util.UUID;
 import java.util.Random;
 
 public class ProtectionEnchantment extends CustomEnchantment implements Listener {
     
-    private static final UUID PROTECTION_UUID = UUID.fromString("123e4567-e89b-12d3-a456-426614174007");
     private final Random random = new Random();
     
     public ProtectionEnchantment() {

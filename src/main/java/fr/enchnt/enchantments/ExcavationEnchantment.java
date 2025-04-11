@@ -43,7 +43,7 @@ public class ExcavationEnchantment extends CustomEnchantment implements Listener
                 block.getWorld().spawnParticle(Particle.BLOCK_CRACK, 
                     block.getLocation().add(0.5, 0.5, 0.5),
                     5, 0.2, 0.2, 0.2, 0,
-                    block.getBlockData());
+                    block.getType());
             }
         }
     }
@@ -85,17 +85,17 @@ public class ExcavationEnchantment extends CustomEnchantment implements Listener
             case DIAMOND_PICKAXE:
             case IRON_PICKAXE:
             case STONE_PICKAXE:
-            case WOODEN_PICKAXE:
+            case WOOD_PICKAXE:
                 return blockType.name().contains("ORE") || 
                        blockType.name().contains("STONE") ||
                        blockType == Material.DIAMOND_BLOCK ||
                        blockType == Material.IRON_BLOCK ||
                        blockType == Material.GOLD_BLOCK;
                        
-            case DIAMOND_SHOVEL:
-            case IRON_SHOVEL:
-            case STONE_SHOVEL:
-            case WOODEN_SHOVEL:
+            case DIAMOND_SPADE:
+            case IRON_SPADE:
+            case STONE_SPADE:
+            case WOOD_SPADE:
                 return blockType.name().contains("DIRT") ||
                        blockType.name().contains("SAND") ||
                        blockType == Material.GRAVEL ||
@@ -104,11 +104,11 @@ public class ExcavationEnchantment extends CustomEnchantment implements Listener
             case DIAMOND_AXE:
             case IRON_AXE:
             case STONE_AXE:
-            case WOODEN_AXE:
+            case WOOD_AXE:
                 return blockType.name().contains("LOG") ||
                        blockType.name().contains("WOOD") ||
                        blockType == Material.PUMPKIN ||
-                       blockType == Material.MELON;
+                       blockType == Material.MELON_BLOCK;
                        
             default:
                 return false;

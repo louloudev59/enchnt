@@ -52,7 +52,7 @@ public class DeforestationEnchantment extends CustomEnchantment implements Liste
                 treeBlock.getWorld().spawnParticle(Particle.BLOCK_CRACK, 
                     treeBlock.getLocation().add(0.5, 0.5, 0.5),
                     5, 0.2, 0.2, 0.2, 0,
-                    treeBlock.getType().createBlockData());
+                    treeBlock.getType());
             }
         }
     }

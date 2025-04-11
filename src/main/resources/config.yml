@@ -176,4 +176,56 @@ rejuvenation:
 siphon:
   enabled: true
   max-level: 3
-  exp-multiplier: 1.5 
+  exp-multiplier: 1.5
+
+enchantments:
+  spawn:
+    chest:
+      min_level: 1
+      max_level: 3
+      probability: 0.1
+    villager:
+      min_level: 1
+      max_level: 3
+      probability: 0.15
+    enchanting_table:
+      min_level: 1
+      max_level: 3
+      probability: 0.2
+  specific:
+    affinity:
+      chest_weight: 5
+      villager_weight: 4
+      enchanting_table_weight: 3
+    neutralizer:
+      chest_weight: 4
+      villager_weight: 3
+      enchanting_table_weight: 2
+    shockwave:
+      chest_weight: 3
+      villager_weight: 4
+      enchanting_table_weight: 3
+    telekinesis:
+      chest_weight: 5
+      villager_weight: 3
+      enchanting_table_weight: 4
+    soulbound:
+      chest_weight: 2
+      villager_weight: 3
+      enchanting_table_weight: 2
+    rejuvenation:
+      chest_weight: 4
+      villager_weight: 4
+      enchanting_table_weight: 3
+    siphon:
+      chest_weight: 3
+      villager_weight: 4
+      enchanting_table_weight: 3
+    harvest:
+      chest_weight: 4
+      villager_weight: 5
+      enchanting_table_weight: 4
+    metabolism:
+      chest_weight: 3
+      villager_weight: 4
+      enchanting_table_weight: 3 
